@@ -2,10 +2,19 @@ let play = true
 let playerScore = 0;
 
 
+let username = prompt ("Please enter a username")
+
+
+while (username.length > 10) {
+    alert ('Username is more than 10 words, please try again')
+    username = prompt('Please enter a new username')
+}
+
 while (play == true){
 
 
-let playerMove = prompt ("Choose rock, paper or scissors") ;
+let playerMove = prompt ( username+ " choose rock, paper or scissors") ;
+
 let computerRandom = Math.floor(Math.random() * 3);
 
 
@@ -57,7 +66,7 @@ console.log(playerScore)
 console.log(rules())
 console.log(computerFunction())
 
-play = confirm("confirm to play again")
+play = confirm( username + " confirm to play again")
 
 }
 
