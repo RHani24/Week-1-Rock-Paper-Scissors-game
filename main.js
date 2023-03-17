@@ -1,5 +1,11 @@
+let play = true
+while (play == true){
+
+
 let playerMove = prompt ("Choose rock, paper or scissors") ;
 let computerRandom = Math.floor(Math.random() * 3);
+
+
 
 
 let computerFunction = function(){
@@ -43,5 +49,11 @@ if(rules() == 1){
 } else if (rules()  == -1){
     alert ("lose " + rules())
 }
+
 console.log(rules())
 console.log(computerFunction())
+
+play = confirm("confirm to play again")
+
+}
+
