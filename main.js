@@ -1,6 +1,19 @@
-
 let playerMove = prompt ("Choose rock, paper or scissors") ;
-let computerMove = "rock";
+let computerRandom = Math.floor(Math.random() * 3);
+
+
+let computerFunction = function(){
+    if (computerRandom == 0){
+        return computerMove = "rock";
+    } else if (computerRandom == 1){
+        return computerMove = "paper";
+    } else {
+        return computerMove = "scissors";
+    }
+}
+
+computerMove = computerFunction()
+
 let playerScore = '0';
 let computerScore ='0';
 
@@ -31,3 +44,4 @@ if(rules() == 1){
     alert ("lose " + rules())
 }
 console.log(rules())
+console.log(computerFunction())
