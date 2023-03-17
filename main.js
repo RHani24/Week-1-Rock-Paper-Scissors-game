@@ -1,13 +1,13 @@
 
-let playerMove = "paper";
-let computerMove = "paper";
+let playerMove = prompt ("Choose rock, paper or scissors") ;
+let computerMove = "rock";
 let playerScore = '0';
 let computerScore ='0';
 
 
 const rules = function(player1, player2){
     if (playerMove === computerMove)
-        return player1 = 0
+        return player1 = 0; 
     if (playerMove == "rock" && computerMove == "scissors"){
         return player1 = 1
     } else if (playerMove == "rock" && computerMove == "paper"){
@@ -24,10 +24,10 @@ const rules = function(player1, player2){
 }
 
 if(rules() == 1){
-    console.log('win')
+    alert ("win " + rules()) 
 } else if (rules() == 0){
-    console.log('draw')
-} else if (rules() == -1){
-    console.log('lose')
+    alert ("draw " + rules())
+} else if (rules()  == -1){
+    alert ("lose " + rules())
 }
 console.log(rules())
