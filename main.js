@@ -1,4 +1,7 @@
 let play = true
+let playerScore = 0;
+
+
 while (play == true){
 
 
@@ -20,11 +23,9 @@ let computerFunction = function(){
 
 computerMove = computerFunction()
 
-let playerScore = '0';
-let computerScore ='0';
+let computerScore = 0;
 
-
-const rules = function(player1, player2){
+const rules = function(){
     if (playerMove === computerMove)
         return player1 = 0; 
     if (playerMove == "rock" && computerMove == "scissors"){
@@ -41,15 +42,18 @@ const rules = function(player1, player2){
         return player1 = -1
     }
 }
+playerScore = playerScore + rules()
 
 if(rules() == 1){
-    alert ("win " + rules()) 
+    alert ("the computer chose " + computerMove + "       win "+" score: " + playerScore) 
 } else if (rules() == 0){
-    alert ("draw " + rules())
+    alert ("the computer chose " + computerMove + "       draw "+" score: " + playerScore)
 } else if (rules()  == -1){
-    alert ("lose " + rules())
+    alert ("the computer chose " + computerMove + "       lose "+" score: " + playerScore)
 }
 
+
+console.log(playerScore)
 console.log(rules())
 console.log(computerFunction())
 
