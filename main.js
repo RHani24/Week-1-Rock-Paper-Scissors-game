@@ -1,26 +1,33 @@
 
 let playerMove = "paper";
-let computerMove = "rock";
+let computerMove = "paper";
+let playerScore = '0';
+let computerScore ='0';
 
-let compare = function () {
+
+const rules = function(player1, player2){
     if (playerMove === computerMove)
-    return console.log("draw!")
-    }
-
-if (playerMove == "rock" && computerMove == "scissors"){
-        console.log('win')
+        return player1 = 0
+    if (playerMove == "rock" && computerMove == "scissors"){
+        return player1 = 1
     } else if (playerMove == "rock" && computerMove == "paper"){
-        console.log('lose')
+        return player1 = -1
     } else if (playerMove == "paper" && computerMove == "rock"){
-        console.log('win')
-    } else if (playerMove == "paper" && computerMove == "scissor"){
-        console.log('lose')
-    } else if (playerMove == "scissor" && computerMove == "paper"){
-        console.log('win')
-    } else if (playerMove == "scissor" && computerMove == "rock"){
-        console.log('lose')
+        return player1 = 1
+    } else if (playerMove == "paper" && computerMove == "scissors"){
+        return player1 = -1
+    } else if (playerMove == "scissors" && computerMove == "paper"){
+        return player1 = 1
+    } else if (playerMove == "scissors" && computerMove == "rock"){
+        return player1 = -1
     }
+}
 
-
-
-compare (playerMove,computerMove)
+if(rules() == 1){
+    console.log('win')
+} else if (rules() == 0){
+    console.log('draw')
+} else if (rules() == -1){
+    console.log('lose')
+}
+console.log(rules())
