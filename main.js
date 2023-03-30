@@ -19,7 +19,6 @@ let computerRandom = Math.floor(Math.random() * 3);
 
 
 
-
 let computerFunction = function(){
     if (computerRandom == 0){
         return computerMove = "rock";
